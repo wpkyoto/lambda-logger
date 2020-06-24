@@ -35,11 +35,11 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/wpkyoto/aws-api-responsebuilder/issues"
+    "url": "https://github.com/wpkyoto/lambda-logger/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wpkyoto/aws-api-responsebuilder.git"
+    "url": "https://github.com/wpkyoto/lambda-logger.git"
   },
   "prettier": {
     "printWidth": 80,
