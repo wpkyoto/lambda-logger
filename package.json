@@ -15,12 +15,14 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "prepare": "tsdx build"
+    "prepare": "tsdx build",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "tsdx lint --fix",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "prettier": {
@@ -29,17 +31,24 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "lambda-logger",
+  "name": "@wpkyoto/lambda-logger",
   "description": "Simple Logger classes for AWS Lambda",
   "author": "Hidetaka Okamoto",
   "module": "dist/lambda-logger.esm.js",
   "devDependencies": {
+    "@commitlint/cli": "9.0.1",
+    "@commitlint/config-conventional": "9.0.1",
     "@types/aws-lambda": "^8.10.56",
     "@types/uuid": "^8.0.0",
+    "lint-staged": "10.2.11",
     "husky": "^4.2.5",
     "tsdx": "^0.13.2",
     "tslib": "^2.0.0",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.5",
+    "semantic-release": "17.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "tslog": "^2.5.0",

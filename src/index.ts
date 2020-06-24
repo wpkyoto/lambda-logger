@@ -1,1 +1,1 @@
-export * from './tslog.class'
+export * from './tslog.class';
