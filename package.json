@@ -16,6 +16,9 @@
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
+    "compodoc": "npx compodoc -p tsconfig.json -d docs",
+    "doc:export": "npm run compodoc && touch ./docs/.nojekyll",
+    "doc:serve": "npm run compodoc -- -s",
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {},
