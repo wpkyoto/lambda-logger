@@ -1,4 +1,6 @@
 __tests__/
+test/
+.github/
 docs/
 .eslint*
 .gitignore
@@ -16,3 +18,5 @@ yarn.lock
 examples/
 .rpt2_cache/
 ogp_*.png
+*.config.js
+renovate.json
