@@ -24,9 +24,22 @@
   "peerDependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint --fix",
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "tsdx lint --fix",
+      "git add"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/wpkyoto/aws-api-responsebuilder/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wpkyoto/aws-api-responsebuilder.git"
   },
   "prettier": {
     "printWidth": 80,

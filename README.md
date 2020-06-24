@@ -1,4 +1,6 @@
 # Lambda Logger
+[![npm version](https://badge.fury.io/js/%40wpkyoto%2Flambda-logger.svg)](https://badge.fury.io/js/%40wpkyoto%2Flambda-logger)
+[![npm version](https://nodei.co/npm/@wpkyoto/lambda-logger.png)](https://badge.fury.io/js/%40wpkyoto%2Flambda-logger)
 
 ## Getting started
 
