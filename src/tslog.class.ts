@@ -1,6 +1,7 @@
 import { Logger as TsLogger, ISettingsParam } from 'tslog';
 import { v4 as uuid } from 'uuid';
 import { isInAWSLambda, AWSLambdaEnvContext } from './lambda.utils';
+import { Context } from 'aws-lambda';
 
 export class TSLoggerService {
   private static _instance: TSLoggerService;
@@ -21,6 +22,19 @@ export class TSLoggerService {
         : '',
       instanceName: this.processId,
     });
+  }
+
+  /**
+   * Set AWS Request id to the logger
+   * @TODO: insert another atts
+   * @param context 
+   */
+  public setLambdaContext(context: Context): this {
+      this._logger.setSettings({
+          ...this._logger.settings,
+          requestId: context.awsRequestId,
+      })
+      return this
   }
 
   public static getInstance(loggerConfig?: ISettingsParam): TSLoggerService {
