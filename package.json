@@ -24,15 +24,9 @@
   "peerDependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "tsdx lint --fix",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  },
-  "lint-staged": {
-    "*.ts": [
-      "tsdx lint --fix",
-      "git add"
-    ]
   },
   "bugs": {
     "url": "https://github.com/wpkyoto/lambda-logger/issues"

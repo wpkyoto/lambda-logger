@@ -27,14 +27,14 @@ export class TSLoggerService {
   /**
    * Set AWS Request id to the logger
    * @TODO: insert another atts
-   * @param context 
+   * @param context
    */
   public setLambdaContext(context: Context): this {
-      this._logger.setSettings({
-          ...this._logger.settings,
-          requestId: context.awsRequestId,
-      })
-      return this
+    this._logger.setSettings({
+      ...this._logger.settings,
+      requestId: context.awsRequestId,
+    });
+    return this;
   }
 
   public static getInstance(loggerConfig?: ISettingsParam): TSLoggerService {
